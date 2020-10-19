@@ -1,0 +1,14 @@
+version: 2.1
+
+workflows:
+  workflow:
+    jobs:
+      - job
+
+jobs:
+  job:
+    machine: true
+    resource_class: semanticallynull/macos-test
+    steps:
+      - run: echo hello runner
+      - run: pwd
